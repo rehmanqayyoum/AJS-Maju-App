@@ -8,7 +8,6 @@ body {
   font-family: var(--font-body);
   font-size: var(--font-base);
   line-height: 1.6;
-
 }
 
 * {
@@ -17,8 +16,8 @@ body {
 
 /*  */
 :root {
-  --font-heading: 'Calibri', 'Segoe UI', sans-serif;
-  --font-body: 'Calibri', 'Segoe UI', sans-serif;
+  --font-heading: "Calibri", "Segoe UI", sans-serif;
+  --font-body: "Calibri", "Segoe UI", sans-serif;
   --font-display: clamp(2.5rem, 6vw, 4rem);
   /* h1 */
   --font-large: clamp(1.75rem, 4vw, 2.25rem);
@@ -61,31 +60,31 @@ small,
 /*  */
 
 .bg-primary {
-  background-color: #1175BC !important;
+  background-color: #1175bc !important;
 }
 
 .btn-primary {
-  background-color: #1175BC !important;
+  background-color: #1175bc !important;
 }
 
 .bg-secondary {
-  background-color: #26AAE1 !important;
+  background-color: #26aae1 !important;
 }
 
 .bg-secondary-dark {
-  background-color: #0D3A5A !important;
+  background-color: #0d3a5a !important;
 }
 
 .text-secondary {
-  color: #26AAE1 !important;
+  color: #26aae1 !important;
 }
 
 .text-secondary-dark {
-  color: #0D3A5A !important;
+  color: #0d3a5a !important;
 }
 
 .text-primary {
-  color: #1175BC !important;
+  color: #1175bc !important;
 }
 
 .header-main .navbar-nav .nav-link {
@@ -105,7 +104,7 @@ small,
   border-radius: 4px;
   width: 0%;
   height: 4px;
-  background-color: #1175BC;
+  background-color: #1175bc;
   transition: width 0.3s ease;
 }
 
@@ -241,7 +240,7 @@ section[id] {
   padding-bottom: 60px;
 }
 
-.services-section .slick-slide>div {
+.services-section .slick-slide > div {
   display: flex;
   height: 100%;
   padding: 0 15px;
@@ -330,11 +329,11 @@ section[id] {
 .faq-section .faq-accordion .accordion-button:focus {
   box-shadow: none;
   outline: none;
-  border-color: #1175BC;
+  border-color: #1175bc;
 }
 
 .faq-section .faq-accordion .accordion-button:not(.collapsed) {
-  color: #1175BC;
+  color: #1175bc;
   background-color: #e7f1ff;
 }
 
@@ -349,7 +348,7 @@ section[id] {
   right: 30px;
   width: 45px;
   height: 45px;
-  background-color: #1175BC;
+  background-color: #1175bc;
   color: white;
   border: 2px solid #fff;
   opacity: 0;
@@ -377,7 +376,6 @@ section[id] {
 }
 
 @keyframes bounce {
-
   0%,
   100% {
     transform: translateY(0) scale(1.05);
@@ -432,11 +430,11 @@ section[id] {
 }
 
 .request-modal {
-  z-index: 10000011;
+  z-index: 9995;
 }
 
 a.anchor-hover:hover {
-  color: #1175BC !important;
+  color: #1175bc !important;
 }
 
 .custom-offcanvas {
@@ -474,9 +472,12 @@ a.anchor-hover:hover {
   border-radius: 4px;
 }
 
+/* make toast appear above Bootstrap modals */
+.Toastify__toast-container {
+  z-index: 9999 !important;
+}
 
 @media screen and (max-width: 575px) {
-
   footer .footer-links,
   footer .copyrights {
     padding: 0px 25px;
@@ -493,7 +494,7 @@ a.anchor-hover:hover {
 
 @media (max-width: 991px) {
   .hero-section {
-    background-image: url('/src/assets/images/layers/hero-bg-mobile.webp') !important;
+    background-image: url("/src/assets/images/layers/hero-bg-mobile.webp") !important;
   }
 
   .header-main .navbar-row {
