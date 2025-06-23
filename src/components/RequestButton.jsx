@@ -184,16 +184,16 @@ export default function RequestButton() {
                       Office Cleaning & Tea Lady Services
                     </option>
                     <option value="Initial/After Construction Cleaning">
-                      Initial/After Construction Cleaning - 0
+                      Initial/After Construction Cleaning
                     </option>
                     <option value="Carpet & Upholstery Cleaning">
-                      Carpet & Upholstery Cleaning - 0
+                      Carpet & Upholstery Cleaning
                     </option>
                     <option value="Floor Scrubbing & Polishing">
-                      Floor Scrubbing & Polishing - 0
+                      Floor Scrubbing & Polishing
                     </option>
                     <option value="External Facade Cleaning">
-                      External Facade Cleaning - 0
+                      External Facade Cleaning
                     </option>
                     <option value="Landscaping Service">
                       Landscaping Service
@@ -201,7 +201,7 @@ export default function RequestButton() {
                     <option value="Maintenance Cleaning">
                       Maintenance Cleaning
                     </option>
-                    <option value="Waste Disposal">Waste Disposal - 0</option>
+                    <option value="Waste Disposal">Waste Disposal</option>
                     <option value="Corporate Office Cleaning">
                       Corporate Office Cleaning
                     </option>
