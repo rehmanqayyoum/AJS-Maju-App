@@ -6,6 +6,9 @@ import { toast } from "react-toastify";
 
 export default function RequestButton() {
   const [show, setShow] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState(null);
+  const recaptchaRef = useRef(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     building_type: "",
     services_type: "",
@@ -18,9 +21,17 @@ export default function RequestButton() {
     message: "",
   });
 
-  const [captchaToken, setCaptchaToken] = useState(null);
-  const recaptchaRef = useRef(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const servicesWithoutCleaners = [
+    "Initial/After Construction Cleaning",
+    "Carpet & Upholstery Cleaning",
+    "Floor Scrubbing & Polishing",
+    "External Facade Cleaning",
+    "Waste Disposal",
+  ];
+
+  const isCleanerRequired = !servicesWithoutCleaners.includes(
+    formData.services_type
+  );
 
   const handleClose = () => {
     setShow(false);
@@ -41,7 +52,18 @@ export default function RequestButton() {
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setFormData({ ...formData, [id]: value });
+
+    // auto-clear cleaner_no if not required
+    if (id === "services_type") {
+      const needsCleaners = !servicesWithoutCleaners.includes(value);
+      setFormData((prev) => ({
+        ...prev,
+        [id]: value,
+        cleaner_no: needsCleaners ? prev.cleaner_no : "", // clear if not required
+      }));
+    } else {
+      setFormData({ ...formData, [id]: value });
+    }
   };
 
   const handleCaptchaChange = (token) => {
@@ -53,18 +75,15 @@ export default function RequestButton() {
 
     if (isSubmitting) return;
 
-    const { building_type, services_type, cleaner_no, name, email, phone } =
-      formData;
+    const { building_type, services_type, name, email, phone } = formData;
 
-    if (
-      !building_type ||
-      !services_type ||
-      !cleaner_no ||
-      !name ||
-      !email ||
-      !phone
-    ) {
+    if (!building_type || !services_type || !name || !email || !phone) {
       toast.error("Please fill all required fields!");
+      return;
+    }
+
+    if (isCleanerRequired && !formData.cleaner_no) {
+      toast.error("Please enter number of cleaners.");
       return;
     }
 
@@ -158,33 +177,54 @@ export default function RequestButton() {
                   <Form.Label>Type of Services</Form.Label>
                   <Form.Select required onChange={handleChange}>
                     <option value="">Select...</option>
-                    <option>Supply Contract Cleaner</option>
-                    <option>Office Cleaning & Tea Lady Services</option>
-                    <option>Initial/After Construction Cleaning</option>
-                    <option>Carpet & Upholstery Cleaning</option>
-                    <option>Floor Scrubbing & Polishing</option>
-                    <option>External Facade Cleaning</option>
-                    <option>Landscaping Service</option>
-                    <option>Maintenance Cleaning</option>
-                    <option>Waste Disposal</option>
-                    <option>Corporate Office Cleaning</option>
-                    <option>Cleaning Service</option>
+                    <option value="Supply Contract Cleaner">
+                      Supply Contract Cleaner
+                    </option>
+                    <option value="Office Cleaning & Tea Lady Services">
+                      Office Cleaning & Tea Lady Services
+                    </option>
+                    <option value="Initial/After Construction Cleaning">
+                      Initial/After Construction Cleaning - 0
+                    </option>
+                    <option value="Carpet & Upholstery Cleaning">
+                      Carpet & Upholstery Cleaning - 0
+                    </option>
+                    <option value="Floor Scrubbing & Polishing">
+                      Floor Scrubbing & Polishing - 0
+                    </option>
+                    <option value="External Facade Cleaning">
+                      External Facade Cleaning - 0
+                    </option>
+                    <option value="Landscaping Service">
+                      Landscaping Service
+                    </option>
+                    <option value="Maintenance Cleaning">
+                      Maintenance Cleaning
+                    </option>
+                    <option value="Waste Disposal">Waste Disposal - 0</option>
+                    <option value="Corporate Office Cleaning">
+                      Corporate Office Cleaning
+                    </option>
+                    <option value="Cleaning Service">Cleaning Service</option>
                   </Form.Select>
                 </Form.Group>
               </Col>
 
-              <Col md={4}>
-                <Form.Group controlId="cleaner_no">
-                  <Form.Label>No of Cleaners</Form.Label>
-                  <Form.Control
-                    type="number"
-                    min="1"
-                    placeholder="e.g. 3"
-                    required
-                    onChange={handleChange}
-                  />
-                </Form.Group>
-              </Col>
+              {isCleanerRequired && (
+                <Col md={4}>
+                  <Form.Group controlId="cleaner_no">
+                    <Form.Label>No of Cleaners</Form.Label>
+                    <Form.Control
+                      type="number"
+                      min="1"
+                      placeholder="e.g. 3"
+                      required={isCleanerRequired}
+                      value={formData.cleaner_no}
+                      onChange={handleChange}
+                    />
+                  </Form.Group>
+                </Col>
+              )}
 
               <Col md={4}>
                 <Form.Group controlId="name">
