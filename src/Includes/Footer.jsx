@@ -24,7 +24,7 @@ export default function Footer() {
             <Container>
                 <Row className="text-start text-md-left footer-links">
                     <Col md={3} className="mb-4">
-                        <img src={Logo} alt="AJS Maju Logo" width={140} className="mb-3" />
+                        <a href="#"><img src={Logo} alt="AJS Maju Logo" width={140} className="mb-3" /></a>
                         <p className="text-muted">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                             accusantium doloremque laudantium, totam rem aperiam.
