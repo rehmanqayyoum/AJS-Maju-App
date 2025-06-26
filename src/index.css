@@ -142,6 +142,7 @@ small,
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   min-height: 75px;
+  padding-top: 5px;
 }
 
 .header-main.scrolled .navbar.navigation-bar {
@@ -498,12 +499,19 @@ a.anchor-hover:hover {
     background-image: url("/src/assets/images/layers/hero-bg-mobile.webp") !important;
   }
 
+  .header-main .logo-img {
+    width: 96px;
+    height: 96px;
+  }
+
   .header-main .navbar-row {
-    min-height: 80px;
+    min-height: 60px;
   }
 
   .header-main .navbar-row .navbar-toggler {
     position: absolute;
     right: 25px;
+    font-size: 16px;
   }
+
 }

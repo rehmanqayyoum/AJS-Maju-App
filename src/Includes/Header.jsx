@@ -26,25 +26,31 @@ export default function Header() {
         <header className={`${scrolled ? 'bg-white header-main scrolled position-fixed' : 'bg-primary header-main'}`}>
             <Container>
                 <div className={`bg-primary text-white pt-3 pb-2 ${scrolled ? 'd-none' : ''}`}>
-                    <div className="d-flex align-items-center justify-content-end">
+                    <div className="d-flex align-items-center justify-content-lg-end flex-wrap gap-2">
                         <div className="d-flex align-items-center me-3">
                             <TbPhoneCall className="me-2" />
-                            <span>Call for help : 03-8322 4411</span>
+                            <a href="tel:0383224411" className="text-white text-decoration-none">
+                                Call for help : 03-8322 4411
+                            </a>
                         </div>
                         <div className="d-flex align-items-center justify-content-center me-3">
                             <LuMail className="me-2" />
-                            <span>info@ajsmaju.com</span>
+                            <a href="mailto:info@ajsmaju.com" className="text-white text-decoration-none">
+                                info@ajsmaju.com
+                            </a>
                         </div>
                         <div className="d-flex align-items-center gap-2">
-                            <a href="#" className="text-primary bg-white rounded-pill social-icon">
+                            <a href="" className="text-primary bg-white rounded-pill social-icon">
                                 <FaFacebookF />
                             </a>
-                            <a href="#" className="text-primary bg-white rounded-pill social-icon">
+                            <a href="https://www.linkedin.com/company/ajsmaju/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-primary bg-white rounded-pill social-icon" >
                                 <FaLinkedinIn />
                             </a>
-                            <a href="#" className="text-primary bg-white rounded-pill social-icon">
+
+                            <a href="https://www.instagram.com/ajsmaju/" target="_blank" rel="noopener noreferrer" className="text-primary bg-white rounded-pill social-icon" >
                                 <FaInstagram />
                             </a>
+
                         </div>
                     </div>
                 </div>

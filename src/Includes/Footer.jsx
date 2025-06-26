@@ -4,11 +4,11 @@ import {
     FaFacebookF,
     FaInstagram,
     FaLinkedinIn,
-    FaPhone,
-    FaEnvelope,
     FaMapMarkerAlt
 } from 'react-icons/fa';
 import Logo from "../assets/images/logos/logo.svg";
+import { TbPhoneCall } from 'react-icons/tb';
+import { LuMail } from 'react-icons/lu';
 
 export default function Footer() {
     const footerSecStyle = {
@@ -30,9 +30,9 @@ export default function Footer() {
                             accusantium doloremque laudantium, totam rem aperiam.
                         </p>
                         <div className="d-flex gap-3">
-                            <a href="#" className="text-white bg-primary rounded-pill social-icon"><FaFacebookF /></a>
-                            <a href="#" className="text-white bg-primary rounded-pill social-icon"><FaInstagram /></a>
-                            <a href="#" className="text-white bg-primary rounded-pill social-icon"><FaLinkedinIn /></a>
+                            <a href="" className="text-white bg-primary rounded-pill social-icon"><FaFacebookF /></a>
+                            <a href="https://www.linkedin.com/company/ajsmaju/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-white bg-primary rounded-pill social-icon"><FaLinkedinIn /></a>
+                            <a href="https://www.instagram.com/ajsmaju/" target="_blank" rel="noopener noreferrer" className="text-white bg-primary rounded-pill social-icon"><FaInstagram /></a>
                         </div>
                     </Col>
 
@@ -48,14 +48,16 @@ export default function Footer() {
 
                     <Col md={3} className="mb-4">
                         <h6 className="fw-bold text-primary">CONTACT</h6>
-                        <p className="text-muted mb-2">
-                            <FaPhone className="me-2" />
-                            03-8322 4411
-                        </p>
-                        <p className="text-muted mb-0">
-                            <FaEnvelope className="me-2" />
-                            info@ajsmaju.com
-                        </p>
+                        <div className="d-flex align-items-center mb-2">
+                            <TbPhoneCall className="me-2" />
+                            <a href="tel:0383224411" className="text-muted text-decoration-none"> 03-8322 4411 </a>
+                        </div>
+                        <div className="d-flex align-items-center">
+                            <LuMail className="me-2" />
+                            <a href="mailto:info@ajsmaju.com" className="text-muted text-decoration-none">
+                                info@ajsmaju.com
+                            </a>
+                        </div>
                     </Col>
 
                     <Col md={4} className="mb-4">
