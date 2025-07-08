@@ -25,7 +25,7 @@ export default function Header() {
     return (
         <header className={`${scrolled ? 'bg-white header-main scrolled position-fixed' : 'bg-primary header-main'}`}>
             <Container>
-                <div className={`bg-primary text-white pt-3 pb-2 ${scrolled ? 'd-none' : ''}`}>
+                <div className={`bg-primary text-white pt-3 pb-2 announcement-bar ${scrolled ? 'd-none' : ''}`}>
                     <div className="d-flex align-items-center justify-content-lg-end flex-wrap gap-2">
                         <div className="d-flex align-items-center me-3">
                             <TbPhoneCall className="me-2" />
@@ -93,18 +93,49 @@ export default function Header() {
                             <Nav.Link onClick={closeMenu} href="#certifications" className='anchor-hover fw-semibold'>Certifications</Nav.Link>
                             <Nav.Link onClick={closeMenu} href="#about" className='anchor-hover fw-semibold'>About Us</Nav.Link>
                             <Nav.Link onClick={closeMenu} href="#contact" className='anchor-hover fw-semibold'>Contact Us</Nav.Link>
+                            {/* CTA Button */}
+                            <div className="mt-2">
+                                <RequestButton />
+                            </div>
                         </Nav>
 
-                        {/* Divider */}
-                        <hr className="my-4 mx-3" />
 
-                        {/* CTA Button */}
-                        <div className="px-3">
-                            <RequestButton />
+                        {/* Divider */}
+                        <hr className="mt-4 mb-2 mx-3" />
+
+                        {/* Footer Section */}
+                        <div className="drawer-footer p-3 text-muted">
+                            <div className="gap-2 mb-3">
+                                <div className="d-flex align-items-center me-3 text-primary mb-2">
+                                    <TbPhoneCall className="me-2" />
+                                    <a href="tel:0383224411" className="text-primary text-decoration-none">
+                                        03-8322 4411
+                                    </a>
+                                </div>
+                                <div className="d-flex align-items-center me-3 text-primary mb-2">
+                                    <LuMail className="me-2" />
+                                    <a href="mailto:info@ajsmaju.com" className="text-primary text-decoration-none">
+                                        info@ajsmaju.com
+                                    </a>
+                                </div>
+                                <div className="d-flex align-items-center gap-2 mt-3">
+                                    <a href="" className="text-white bg-primary rounded-pill social-icon">
+                                        <FaFacebookF />
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/ajsmaju/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-white bg-primary rounded-pill social-icon" >
+                                        <FaLinkedinIn />
+                                    </a>
+
+                                    <a href="https://www.instagram.com/ajsmaju/" target="_blank" rel="noopener noreferrer" className="text-white bg-primary rounded-pill social-icon" >
+                                        <FaInstagram />
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div className='text-start'>&copy; {new Date().getFullYear()} by AJS Maju Services Sdn Bhd.</div>
                         </div>
                     </Offcanvas.Body>
                 </Offcanvas>
-
             </Container>
         </header>
     )

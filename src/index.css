@@ -228,7 +228,8 @@ section[id] {
 .services-card .services-icon {
   position: absolute;
   bottom: -38px;
-  left: 130px;
+  left: 50%;
+  transform: translateX(-50%);
   background: #fff;
   height: 91px;
   width: 91px;
@@ -253,17 +254,18 @@ section[id] {
 
 .why-choose-section .why-feature-box {
   position: relative;
-  padding: 20px;
+  padding: 20px 65px;
   min-height: 270px;
   max-width: 350px;
   width: 100%;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center center;
   background-repeat: no-repeat;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -288,14 +290,8 @@ section[id] {
   font-size: 0.85rem;
   color: #555;
   line-height: 1.4;
-}
-
-/* Responsive for mobile */
-@media (max-width: 767px) {
-  .why-choose-section .why-feature-box {
-    min-height: auto;
-    padding: 15px;
-  }
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .strength-sec .stats-card {
@@ -363,43 +359,6 @@ section[id] {
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform: scale(0);
   border-radius: 50%;
-}
-
-.back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-  animation: pulse 2s infinite;
-}
-
-.back-to-top:hover {
-  animation: bounce 0.6s;
-}
-
-@keyframes bounce {
-
-  0%,
-  100% {
-    transform: translateY(0) scale(1.05);
-  }
-
-  50% {
-    transform: translateY(-6px) scale(1.1);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(17, 117, 188, 0.6);
-  }
-
-  70% {
-    box-shadow: 0 0 0 10px rgba(17, 117, 188, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(17, 117, 188, 0);
-  }
 }
 
 .quote-btn {
@@ -478,6 +437,44 @@ a.anchor-hover:hover {
   z-index: 999999 !important;
 }
 
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  animation: pulse 2s infinite;
+}
+
+.back-to-top:hover {
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1.05);
+  }
+
+  50% {
+    transform: translateY(-6px) scale(1.1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(17, 117, 188, 0.6);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(17, 117, 188, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(17, 117, 188, 0);
+  }
+}
+
+/* Responsive */
 @media screen and (max-width: 575px) {
 
   footer .footer-links,
@@ -489,14 +486,31 @@ a.anchor-hover:hover {
     padding: 70px 25px;
   }
 
-  .hero-section {
+  .hero-section .content {
     padding: 0px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-section .why-feature-box {
+    padding: 35px;
+  }
+
+  .trust-section,
+  .faq-section {
+    padding-bottom: 0px;
   }
 }
 
 @media (max-width: 991px) {
   .hero-section {
-    background-image: url("/src/assets/images/layers/hero-bg-mobile.webp") !important;
+    background-image: inherit !important;
+    padding-top: 60px !important;
+    min-height: auto !important;
+  }
+
+  .header-main.scrolled~main .hero-section {
+    padding-top: 120px !important;
   }
 
   .header-main .logo-img {
@@ -514,4 +528,54 @@ a.anchor-hover:hover {
     font-size: 16px;
   }
 
+  .certifications-sec,
+  .why-choose-section,
+  .faq-section {
+    padding-top: 0 !important;
+  }
+
+  .faq-section {
+    position: relative;
+    top: -150px;
+  }
+
+  .why-choose-section .row .cloud {
+    align-items: center !important;
+  }
+
+  .why-choose-section .row .center-col {
+    order: 3;
+  }
+
+  .announcement-bar {
+    display: none !important;
+  }
+
+  .why-choose-section {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .why-choose-section .why-feature-box.cloud-1 {
+    left: 80px;
+  }
+
+  .why-choose-section .why-feature-box.cloud-3 {
+    right: 80px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 992px) {
+  .why-choose-section .why-feature-box {
+    padding: 20px 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    background-image: inherit !important;
+    padding-top: 60px !important;
+    min-height: auto !important;
+  }
 }

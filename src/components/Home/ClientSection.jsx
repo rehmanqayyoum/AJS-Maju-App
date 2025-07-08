@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap";
-import TeamImage from "../../assets/images/img_7.png";
+import TeamImage from "../../assets/images/img_7_new.png";
 import RequestButton from '../RequestButton';
 
 export default function ClientSection() {
@@ -26,7 +26,7 @@ export default function ClientSection() {
                 <Row>
                     <Col lg={12} className="text-center mb-5">
                         <h2 className="fw-bold">Proud Clients</h2>
-                        <p className="m-0">
+                        <p className="lead m-0">
                             From top leading companies to growing SMEs, we’ve served diverse clientele across the country.
                         </p>
                     </Col>
@@ -52,7 +52,7 @@ export default function ClientSection() {
                     <Row>
                         <Col lg={12} className="mx-auto text-center">
                             <div className='bg-primary rounded-3 text-white shadow px-3 py-5'>
-                                <h2 className="display-6 fw-bold mb-4">Keeping Your Premises Clean Shouldn't Be A Hassle</h2>
+                                <h2 className="mb-4">Keeping Your Premises Clean Shouldn't Be A Hassle</h2>
                                 <p className="lead">
                                     Managing multiple cleaning needs in-house or through the wrong provider can quickly turn into a daily hassle. Every space has different cleaning demands. Office floors, washrooms, lobbies, even backrooms, and meeting all of them perfectly, day after day, is no small task.
                                 </p>
@@ -72,10 +72,10 @@ export default function ClientSection() {
                             <img src={TeamImage} alt="Our Team" className="img-fluid team-image" />
                         </Col>
                         <Col lg={6}>
-                            <h2 className="display-5 fw-bold mb-4">
+                            <h2 className="fw-bold mb-4">
                                 We Keep Your Workplace Clean, Safe & Client-Ready Every Day
                             </h2>
-                            <p className="mb-4 text-muted">
+                            <p className="lead mb-4">
                                 Our professional team of trained cleaning experts ensures your workplace maintains the highest standards
                                 of cleanliness and hygiene. We work around your schedule to provide consistent, reliable service that
                                 keeps your business running smoothly.

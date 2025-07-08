@@ -123,21 +123,9 @@ export default function RequestButton() {
 
   return (
     <>
-      <Button
-        variant="primary"
-        className="rounded-pill px-4 quote-btn"
-        onClick={() => setShow(true)}
-      >
-        Request a Quote
-      </Button>
+      <Button variant="primary" className="rounded-pill px-4 quote-btn" onClick={() => setShow(true)} > Request a Quote </Button>
 
-      <Modal
-        show={show}
-        onHide={handleClose}
-        size="xl"
-        centered
-        className="request-modal"
-      >
+      <Modal show={show} onHide={handleClose} size="xl" centered className="request-modal" >
         <Modal.Header closeButton>
           <Modal.Title className="text-primary fw-bold w-100 text-center">
             Request for Quote

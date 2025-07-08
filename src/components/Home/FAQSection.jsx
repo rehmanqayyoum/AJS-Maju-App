@@ -35,8 +35,8 @@ export default function FAQSection() {
             <Container>
                 <Row>
                     <Col lg={12} className="text-center mb-5">
-                        <h2 className="display-5 fw-bold text-primary">Frequently Asked Questions</h2>
-                        <p className="text-muted">We're here to help you with the information you need about our services.</p>
+                        <h2 className="text-primary">Frequently Asked Questions</h2>
+                        <p className="lead">We're here to help you with the information you need about our services.</p>
                     </Col>
                 </Row>
                 <Row>

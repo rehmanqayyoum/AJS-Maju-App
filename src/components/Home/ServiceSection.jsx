@@ -11,7 +11,7 @@ export default function ServiceSection() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        minHeight: 1150,
+        paddingBottom: 250
     };
 
     const services = [
@@ -64,8 +64,8 @@ export default function ServiceSection() {
             <Container>
                 <Row className="text-center mb-5">
                     <Col>
-                        <h2 className="text-white fw-bold display-5">Our Comprehensive Cleaning Services</h2>
-                        <p className="text-white">Tailored cleaning solutions to keep your premises spotless, safe and welcoming.</p>
+                        <h2 className="text-white">Our Comprehensive Cleaning Services</h2>
+                        <p className="lead text-white">Tailored cleaning solutions to keep your premises spotless, safe and welcoming.</p>
                     </Col>
                 </Row>
 

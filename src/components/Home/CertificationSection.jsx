@@ -23,11 +23,11 @@ export default function CertificationSection() {
             <Container>
                 <Row>
                     <Col lg={12} className="text-center mb-5">
-                        <h2 className="display-5 fw-bold">
+                        <h2 className="">
                             Fully Certified & 100% Compliant. We're Committed to <br />
                             <span className="text-primary-custom">Getting It Right</span>
                         </h2>
-                        <p className="lead text-muted">
+                        <p className="lead">
                             Our certifications and compliance ensure you receive the highest quality service
                         </p>
                         <h5 className="fw-bold mb-3">Our Certifications</h5>

@@ -75,7 +75,7 @@ export default function Footer() {
                 <Container>
                     <Row className="py-4">
                         <Col md={6} className="text-white small">
-                            © 2025 by Maju Services Sdn Bhd. All rights reserved.
+                            © 2025 by AJS Maju Services Sdn Bhd. All rights reserved.
                         </Col>
                         <Col md={6} className="text-md-end text-white small">
                             <a href="#" className="text-white text-decoration-none me-3">Privacy Policy</a>
