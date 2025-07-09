@@ -287,7 +287,7 @@ export default function RequestButton() {
               <Col md={12} className="d-flex justify-content-center">
                 <ReCAPTCHA
                   ref={recaptchaRef}
-                  sitekey="site_key"
+                  sitekey="6Lcoan0rAAAAADbHKNmQyP9WXsXfI7jP2AbfE8Cw"
                   onChange={handleCaptchaChange}
                 />
               </Col>
