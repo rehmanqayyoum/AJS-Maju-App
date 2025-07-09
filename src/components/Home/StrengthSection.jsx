@@ -1,9 +1,10 @@
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
+import strengthBg from "../../assets/images/strength-bg-scale.png";
 
 export default function StrengthSection() {
     const strengthStyle = {
-        backgroundImage: "url('/src/assets/images/strength-bg-scale.png')",
+        backgroundImage: `url(${strengthBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

@@ -1,18 +1,14 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import {
-    FaFacebookF,
-    FaInstagram,
-    FaLinkedinIn,
-    FaMapMarkerAlt
-} from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt } from 'react-icons/fa';
 import Logo from "../assets/images/logos/logo.svg";
 import { TbPhoneCall } from 'react-icons/tb';
 import { LuMail } from 'react-icons/lu';
+import footerBg from "../assets/images/layers/footer-layer.png";
 
 export default function Footer() {
     const footerSecStyle = {
-        backgroundImage: "url('/src/assets/images/layers/footer-layer.png')",
+        backgroundImage: `url(${footerBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

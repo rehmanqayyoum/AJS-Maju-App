@@ -4,10 +4,17 @@ import { Container, Row, Col, Button, Card } from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import RequestButton from '../RequestButton';
+import bgImage from '../../assets/images/service-bg-scale.png';
+import img1 from '../../assets/images/img_1.png';
+import img2 from '../../assets/images/img_2.png';
+import img3 from '../../assets/images/img_3.png';
+import icon1 from '../../assets/images/icons/supply-service.svg';
+import icon2 from '../../assets/images/icons/office-service.svg';
+import icon3 from '../../assets/images/icons/tea-service.svg';
 
 export default function ServiceSection() {
     const serviceSecStyle = {
-        backgroundImage: "url('/src/assets/images/service-bg-scale.png')",
+        backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -18,20 +25,20 @@ export default function ServiceSection() {
         {
             title: "Supply Contract Cleaner",
             description: "We provide skilled and reliable contract cleaners tailored to your specific needs, ensuring that your business maintains high standards of cleanliness at all times.",
-            image: "/src/assets/images/img_1.png",
-            icon: "/src/assets/images/icons/supply-service.svg",
+            image: img1,
+            icon: icon1,
         },
         {
             title: "Corporate Office Cleaning",
             description: "Our office cleaning services keep your workplace clean, organized, and professional, helping to create a healthy and welcoming environment for employees and clients.",
-            image: "/src/assets/images/img_2.png",
-            icon: "/src/assets/images/icons/office-service.svg",
+            image: img2,
+            icon: icon2,
         },
         {
             title: "Tea Lady Services",
             description: "We provide friendly and professional tea lady services, offering beverages, maintaining cleanliness in kitchen areas, and assisting with day-to-day office needs.",
-            image: "/src/assets/images/img_3.png",
-            icon: "/src/assets/images/icons/tea-service.svg",
+            image: img3,
+            icon: icon3,
         },
     ];
 

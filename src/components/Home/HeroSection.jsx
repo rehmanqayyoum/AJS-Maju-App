@@ -1,12 +1,13 @@
 import React from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap";
 import RequestButton from '../RequestButton';
-import HeroBgMobile from '../../assets/images/layers/hero-bg-mobile-1.webp';
+import HeroBgWeb from '../../assets/images/hero-bg-scale.png';
+import HeroBgMobile from '../../assets/images/layers/hero-bg-mobile.png';
 
 export default function HeroSection() {
 
     const heroStyle = {
-        backgroundImage: "url('/src/assets/images/hero-bg-scale-1.webp')",
+        backgroundImage: `url(${HeroBgWeb})`,
         backgroundSize: 'cover',
         backgroundPosition: 'top right',
         backgroundRepeat: 'no-repeat',

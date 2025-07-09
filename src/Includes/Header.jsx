@@ -81,29 +81,24 @@ export default function Header() {
 
                 <Offcanvas show={showMenu} onHide={closeMenu} placement="start" className="custom-offcanvas">
                     <Offcanvas.Body>
-                        {/* Logo at top */}
                         <div className="drawer-header mb-4">
                             <img src={logo} alt="AJS Logo" className="drawer-logo" />
                         </div>
 
-                        {/* Navigation Links */}
                         <Nav className="flex-column text-start px-3">
                             <Nav.Link onClick={closeMenu} href="#home" className='anchor-hover fw-semibold'>Home</Nav.Link>
                             <Nav.Link onClick={closeMenu} href="#services" className='anchor-hover fw-semibold'>Services</Nav.Link>
                             <Nav.Link onClick={closeMenu} href="#certifications" className='anchor-hover fw-semibold'>Certifications</Nav.Link>
                             <Nav.Link onClick={closeMenu} href="#about" className='anchor-hover fw-semibold'>About Us</Nav.Link>
                             <Nav.Link onClick={closeMenu} href="#contact" className='anchor-hover fw-semibold'>Contact Us</Nav.Link>
-                            {/* CTA Button */}
                             <div className="mt-2">
                                 <RequestButton />
                             </div>
                         </Nav>
 
-
                         {/* Divider */}
                         <hr className="mt-4 mb-2 mx-3" />
 
-                        {/* Footer Section */}
                         <div className="drawer-footer p-3 text-muted">
                             <div className="gap-2 mb-3">
                                 <div className="d-flex align-items-center me-3 text-primary mb-2">

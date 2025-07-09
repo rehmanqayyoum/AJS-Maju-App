@@ -1,22 +1,26 @@
 import React from 'react';
 import { Container, Row, Col, Card } from "react-bootstrap";
+import certificate_1 from '../../assets/images/certificates/certificate1.png';
+import certificate_2 from '../../assets/images/certificates/certificate2.png';
+import certificate_3 from '../../assets/images/certificates/certificate3.png';
+
 
 export default function CertificationSection() {
 
     const certificates = [
         {
-            image: "/src/assets/images/certificates/certificate1.png",
+            image: certificate_1,
             name: "Certificate 1",
         },
         {
-            image: "/src/assets/images/certificates/certificate2.png",
+            image: certificate_2,
             name: "Certificate 2",
         },
         {
-            image: "/src/assets/images/certificates/certificate3.png",
+            image: certificate_3,
             name: "Certificate 3",
         }
-    ]
+    ];
 
     return (
         <section id='certifications' className="section-padding certifications-sec">

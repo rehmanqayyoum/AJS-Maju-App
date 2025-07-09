@@ -2,20 +2,32 @@ import React from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap";
 import TeamImage from "../../assets/images/img_7_new.png";
 import RequestButton from '../RequestButton';
+import c01 from '../../assets/images/clients/c01.png';
+import c02 from '../../assets/images/clients/c02.png';
+import c03 from '../../assets/images/clients/c03.png';
+import c04 from '../../assets/images/clients/c04.png';
+import c05 from '../../assets/images/clients/c05.png';
+import c06 from '../../assets/images/clients/c06.png';
+import c07 from '../../assets/images/clients/c07.png';
+import c08 from '../../assets/images/clients/c08.png';
+import c09 from '../../assets/images/clients/c09.png';
+import c10 from '../../assets/images/clients/c10.png';
+import c11 from '../../assets/images/clients/c11.png';
+
 
 export default function ClientSection() {
     const clients = [
-        { name: "Client 1", logo: "/src/assets/images/clients/c01.png" },
-        { name: "Client 2", logo: "/src/assets/images/clients/c02.png" },
-        { name: "Client 3", logo: "/src/assets/images/clients/c03.png" },
-        { name: "Client 4", logo: "/src/assets/images/clients/c04.png" },
-        { name: "Client 5", logo: "/src/assets/images/clients/c05.png" },
-        { name: "Client 6", logo: "/src/assets/images/clients/c06.png" },
-        { name: "Client 7", logo: "/src/assets/images/clients/c07.png" },
-        { name: "Client 8", logo: "/src/assets/images/clients/c08.png" },
-        { name: "Client 9", logo: "/src/assets/images/clients/c09.png" },
-        { name: "Client 10", logo: "/src/assets/images/clients/c10.png" },
-        { name: "Client 11", logo: "/src/assets/images/clients/c11.png" },
+        { name: "Client 1", logo: c01 },
+        { name: "Client 2", logo: c02 },
+        { name: "Client 3", logo: c03 },
+        { name: "Client 4", logo: c04 },
+        { name: "Client 5", logo: c05 },
+        { name: "Client 6", logo: c06 },
+        { name: "Client 7", logo: c07 },
+        { name: "Client 8", logo: c08 },
+        { name: "Client 9", logo: c09 },
+        { name: "Client 10", logo: c10 },
+        { name: "Client 11", logo: c11 },
     ];
 
     const scrollingClients = [...clients, ...clients];
